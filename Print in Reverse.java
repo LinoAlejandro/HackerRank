@@ -14,12 +14,13 @@ void ReversePrint(Node head) {
   // This is a "method-only" submission. 
   // You only need to complete this method. 
   Node node = head;
-  String text = "";
+  ArrayList<String> text = new ArrayList<String>();
   while(node != null){
-      text = text + node.data;
+      text.add(String.valueOf(node.data));
       node = node.next;
   }
-  for(int c = text.length()- 1; c >= 0; c--){
-      System.out.println(text.charAt(c));
+  for(int c = text.size() - 1; c >= 0; c--){
+      System.out.println(text.get(c));
   }
 }
+
